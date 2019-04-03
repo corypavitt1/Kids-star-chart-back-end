@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Star.create(color:"RedSmile", url:"http://localhost:3001//images/stars/RedStarSmile.png")
-Star.create(color:"AuguaStarSmile", url:"http://localhost:3001//images/stars/AuquaStarSmile.png")
-Star.create(color:"YellowSmile", url:"http://localhost:3001//images/stars/YellowSmile.png")
-Star.create(color:"RedStarWhite", url:"http://localhost:3001//images/stars/RedStarWhite.png")
+Star.create(color:"RedSmile", url:"https://kids-star-chart.herokuapp.com//images/stars/RedStarSmile.png")
+Star.create(color:"AuguaStarSmile", url:"https://kids-star-chart.herokuapp.com//images/stars/AuquaStarSmile.png")
+Star.create(color:"YellowSmile", url:"https://kids-star-chart.herokuapp.com//images/stars/YellowSmile.png")
+Star.create(color:"RedStarWhite", url:"https://kids-star-chart.herokuapp.com//images/stars/RedStarWhite.png")
