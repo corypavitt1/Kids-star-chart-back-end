@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*'  # change this before launch
+    origins 'https://kids-star-chart.herokuapp.com/'  # change this before launch
 
     resource '*',
       headers: :any,
