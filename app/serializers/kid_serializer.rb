@@ -1,9 +1,8 @@
 class KidSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :user_id
+  attributes :id, :first_name, :last_name, :user_id, :stars
 belongs_to :user
-attributes :stars
-attributes :chores
-attributes :cks
+has_many :stars
+
 
 
 

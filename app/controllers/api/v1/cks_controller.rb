@@ -23,7 +23,7 @@ class Api::V1::CksController < ApplicationController
             # @token = encode_token(kid_id: @kid.id)
 
             if @ck.valid?
-       render json: {status: 200, ck: @ck}
+       render json: {status: 200, ck:CkSerializer.new(@ck), message:"you got a star!"}
      else
        render json: {status: 400, message: "Sorry Can't Create the connection"}
      end

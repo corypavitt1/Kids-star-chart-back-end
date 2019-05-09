@@ -10,6 +10,7 @@ end
 
 def show
   @stars = Star.find(params[:id])
+  render json: @stars, status: 200
 end
 
 def new
@@ -24,7 +25,8 @@ def create
           # @token = encode_token(kid_id: @kid.id)
 
           if @star.valid?
-     render json: {status: 200, star: @star}
+            @star.save
+     render json: {star: StarSerializer.new(@star),status: 200 }
    else
      render json: {status: 400, message: "Sorry Can't Create a Star"}
    end

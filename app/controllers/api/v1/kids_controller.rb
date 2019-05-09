@@ -1,7 +1,7 @@
 class Api::V1::KidsController < ApplicationController
 
   def index
-
+Kid.all
     # render json: Employee.includes(:task_employees), include: ['task_employees'], include: ['category_employee']
     render json: Kid.all
 
@@ -26,7 +26,8 @@ class Api::V1::KidsController < ApplicationController
             # @token = encode_token(kid_id: @kid.id)
 
             if @kid.valid?
-       render json: {status: 200, kid: @kid }
+              @kid.save
+       render json: {kid: KidSerializer.new(@kid),status: 200 }
      else
        render json: {status: 400, message: "Sorry Can't create KID"}
      end
